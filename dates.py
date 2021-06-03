@@ -34,6 +34,29 @@ def es_data_correcta(data_any):
         return 1
 
 
+def compare_dates(data1, data2):
+    camps1 = data1.split("/")
+    camps2 = data2.split("/")
+
+    flag = 0
+    for i in range(len(camps1)):
+        if camps1[i] != camps2[i]:
+            flag = 1
+            break
+    if flag == 0:
+        return 0
+    else:
+        for i in range(len(camps1)).__reversed__():
+            if camps1[i] > camps2[i]:
+                return 1
+            elif camps1[i] < camps2[i]:
+                return -1
+            else:
+                continue
+
+
+
+
 
 
 
@@ -47,4 +70,8 @@ def es_data_correcta(data_any):
 print(es_bixest(1001))
 print("canvis")
 print(es_data_correcta("29/02/1998"))
+data1 = "28/04/1992"
+data2 = "28/04/1992"
+print(compare_dates(data1, data2))
+
 
