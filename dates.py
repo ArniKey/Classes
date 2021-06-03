@@ -35,6 +35,9 @@ def es_data_correcta(data_any):
 
 
 def compare_dates(data1, data2):
+    if es_data_correcta(data1) != 1 or es_data_correcta(data2) != 1:
+        print("format incorrecte!!")
+        exit(1)
     camps1 = data1.split("/")
     camps2 = data2.split("/")
 
@@ -71,7 +74,7 @@ print(es_bixest(1001))
 print("canvis")
 print(es_data_correcta("29/02/1998"))
 data1 = "28/04/1992"
-data2 = "28/04/1992"
+data2 = "28/07/1992"
 print(compare_dates(data1, data2))
 
 
