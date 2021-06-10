@@ -58,6 +58,24 @@ def compare_dates(data1, data2):
                 continue
 
 
+def es_festiu(dia_setmana, dia_numero, mes_numero):
+    if dia_setmana == 6 or dia_setmana == 7:
+        return 1
+    else:
+        dies_festius = [[31, 1], [1, 1], [25, 12], [26, 12], [6, 1], [24, 6]]
+        for i in dies_festius:
+            if i[0] == dia_numero and i[1] == mes_numero:
+                return 1
+        return 0
+
+
+
+
+
+print(es_festiu(3, 26, 12))
+
+
+
 
 
 
