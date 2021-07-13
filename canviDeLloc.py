@@ -9,3 +9,7 @@ def different_place(lloc1, lloc2):
 
 different_place(31241241, 431256574)
 
+a = 1
+b = 2
+
+
