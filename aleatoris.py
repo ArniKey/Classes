@@ -34,7 +34,24 @@ def lletra_aleatoria():
     return lletra
 
 
-
-
-
 print(lletra_aleatoria())
+
+
+def minuscula_dins_rang(lletra1, lletra2):
+    numero_random = aleatori_amb_minim(ord(lletra1), ord(lletra2))
+    lletra_random = chr(numero_random)
+    return(lletra_random)
+
+
+print(minuscula_dins_rang('d', 'l'))
+
+
+def decimal_random(minim, maxim):
+    minim = int(minim * 100)
+    maxim = int(maxim * 100)
+    decimal_aleatori = aleatori_amb_minim(minim, maxim)
+    decimal_aleatori = float(decimal_aleatori / 100)
+    return decimal_aleatori
+
+
+print(decimal_random(2.11, 2.99))
